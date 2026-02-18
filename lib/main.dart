@@ -67,7 +67,8 @@ class SeccionMasComida extends StatelessWidget {
                 ),
                 Text(
                   "ALEXIS", 
-                  style: TextStyle(fontWeight: FontWeight.w400, color: const Color.fromARGB(204, 255, 255, 255), fontSize: 12, letterSpacing: 2)
+                  // CORRECCIÓN 1: .withValues en lugar de .withOpacity
+                  style: TextStyle(fontWeight: FontWeight.w400, color: Colors.white.withValues(alpha: 0.8), fontSize: 12, letterSpacing: 2)
                 ),
               ],
             ),
@@ -146,7 +147,8 @@ class SeccionMasComida extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
-          BoxShadow(color: const Color.fromARGB(13, 0, 0, 0), blurRadius: 10, offset: const Offset(0, 5)),
+          // CORRECCIÓN 2: .withValues para la sombra
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 5)),
         ],
         border: Border.all(color: Colors.grey.shade200),
       ),
@@ -202,7 +204,6 @@ class SeccionMasComida extends StatelessWidget {
             ),
           ),
           
-          // --- PRECIO ENCERRADO EN RECTÁNGULO ---
           Padding(
             padding: const EdgeInsets.only(right: 12),
             child: Row(
@@ -210,9 +211,11 @@ class SeccionMasComida extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color.fromARGB(25, 0, 123, 167), // Fondo azul muy suave
-                    borderRadius: BorderRadius.circular(8), // Bordes redondeados
-                    border: Border.all(color: const Color.fromARGB(76, 0, 123, 167)), // Borde sutil
+                    // CORRECCIÓN 3: .withValues para el fondo del precio
+                    color: azulCeruleo.withValues(alpha: 0.1), 
+                    borderRadius: BorderRadius.circular(8),
+                    // CORRECCIÓN 4: .withValues para el borde del precio
+                    border: Border.all(color: azulCeruleo.withValues(alpha: 0.3)), 
                   ),
                   child: Text(
                     precio, 
@@ -241,7 +244,8 @@ class SeccionMasComida extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          boxShadow: [BoxShadow(color: const Color.fromARGB(25, 0, 0, 0), blurRadius: 10)],
+          // CORRECCIÓN 5: .withValues en la sombra del banner
+          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 10)],
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25),
@@ -258,7 +262,8 @@ class SeccionMasComida extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [Colors.transparent, const Color.fromARGB(204, 0, 0, 0)],
+                    // CORRECCIÓN 6: .withValues en el gradiente
+                    colors: [Colors.transparent, Colors.black.withValues(alpha: 0.8)],
                   ),
                 ),
                 padding: const EdgeInsets.all(20),
