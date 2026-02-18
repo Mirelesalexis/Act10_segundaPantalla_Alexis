@@ -67,7 +67,7 @@ class SeccionMasComida extends StatelessWidget {
                 ),
                 Text(
                   "ALEXIS", 
-                  style: TextStyle(fontWeight: FontWeight.w400, color: Colors.white.withOpacity(0.8), fontSize: 12, letterSpacing: 2)
+                  style: TextStyle(fontWeight: FontWeight.w400, color: const Color.fromARGB(204, 255, 255, 255), fontSize: 12, letterSpacing: 2)
                 ),
               ],
             ),
@@ -146,7 +146,7 @@ class SeccionMasComida extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, 5)),
+          BoxShadow(color: const Color.fromARGB(13, 0, 0, 0), blurRadius: 10, offset: const Offset(0, 5)),
         ],
         border: Border.all(color: Colors.grey.shade200),
       ),
@@ -210,9 +210,9 @@ class SeccionMasComida extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: azulCeruleo.withOpacity(0.1), // Fondo azul muy suave
+                    color: const Color.fromARGB(25, 0, 123, 167), // Fondo azul muy suave
                     borderRadius: BorderRadius.circular(8), // Bordes redondeados
-                    border: Border.all(color: azulCeruleo.withOpacity(0.3)), // Borde sutil
+                    border: Border.all(color: const Color.fromARGB(76, 0, 123, 167)), // Borde sutil
                   ),
                   child: Text(
                     precio, 
@@ -241,7 +241,7 @@ class SeccionMasComida extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 10)],
+          boxShadow: [BoxShadow(color: const Color.fromARGB(25, 0, 0, 0), blurRadius: 10)],
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(25),
@@ -258,7 +258,7 @@ class SeccionMasComida extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [Colors.transparent, Colors.black.withOpacity(0.8)],
+                    colors: [Colors.transparent, const Color.fromARGB(204, 0, 0, 0)],
                   ),
                 ),
                 padding: const EdgeInsets.all(20),
